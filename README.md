@@ -8,13 +8,22 @@ thats a repository for me that works like an api for everything I need in proces
 
 
 
-> UseProc(
+> UseProc
   -UseProc()
   -tickButtons():
-    that can be used for ScreenObjects for when a finger is pressed
+    that can be used for ScreenObjects for when a finger is pressed (called after a cooldown when pressed, then after a smaller cooldown over and over again and if this didnt happen at the end of the press)
+  -pressStart()
+  -press()
+  -pressEnd()
   
-)
+  > 
+  
 
+> Other:
+  -vibrate()
+  -vibrate(int)
+  
+  
 
 > Time
   ~int year, month, day, hour, minutes, seconds
