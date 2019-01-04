@@ -138,3 +138,18 @@ public class Cooldown{
   
 }
 
+
+public int randFunc(int start, float prly, boolean canBeNeg){
+  int rV = 0;
+  while(random(100) < prly){
+    rV ++;
+  }
+  
+  
+  
+  if(canBeNeg && random(1) < 0.5){
+    rV *= -1;
+  }
+  return start + rV;
+}
+
