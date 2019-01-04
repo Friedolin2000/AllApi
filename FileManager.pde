@@ -173,6 +173,39 @@ public class FileManager{
     return rV;
   }
   
+  public void addToSeries(String name, String val){
+    int last = Integer.parseInt(getVar(name, "0"));
+    setVal(name + "(" + last + ")", val);
+    setVal(name, (last + 1) + "");
+  
+    
+    
+  }
+  
+  public void setSeries(String name, String val, int index){
+    
+  }
+  
+  
+  public void setSeries(String name, String[] content){
+    
+  }
+  
+  public int getSeriesLength(String name){
+    return 0;
+  }
+  
+  public String getSeries(String name, int index){
+    return null;
+  }
+  
+  public String[] getSeries(String name){
+    String[] rV = new String[getSeriesLength(name)];
+    for(int i = 0; i < rV.length; i ++){
+      rV[i] = getSeries(name, i);
+    }
+    return rV;
+  }
   
   public void delete(){
     try{
