@@ -33,3 +33,27 @@ thats a repository for me that works like an api for everything I need in proces
     inits Time with date and time of rn
   -Time(int, int, int)
     u can set date or time
+
+
+
+-> FileManager
+-getStrings
+-setStrings
+-addString(atEnd, String)
+setString(index)
+addStrings
+
+-getImg
+-setImg
+
+-getVar / getVal
+
+-getSeries
+
+-getValues/Vars ????
+
+
+delete
+
+
+
