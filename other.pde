@@ -153,3 +153,44 @@ public int randFunc(int start, float prly, boolean canBeNeg){
   return start + rV;
 }
 
+
+
+
+// removes the .0 in float strings
+public String intify(float num){
+  String rV = num + "";
+  try{
+    if(rV.split("\\.")[1].equals("0")){
+      rV = rV.split("\\.")[0];
+    }
+  } catch(Exception e){}
+  return rV;
+}
+
+public float squareSpiral(float x, float y){
+  // TODO maybe a parameter to select the direction the spiral is going
+  float a = abs(abs(x) - abs(y)) + abs(x) + abs(y);
+  float rV = a * a + (a + x - y) * sign(x + y + 0.1) + 1.0;
+
+  //rV =  x * x + y * y;
+  
+  return rV;
+}
+
+public float sign(float in){
+  if(in < 0){
+    return -1;
+  } else if(in > 0){
+    return 1;
+  }
+  return in; // cuz if 0 its 0
+}
+
+
+
+
+
+
+
+
+
