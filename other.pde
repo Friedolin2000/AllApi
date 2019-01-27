@@ -190,6 +190,38 @@ public float sign(float in){
 
 
 
+public int randFunc(int start, int steps, float prly, boolean canBeNeg){
+  int rV = 0;
+  
+  while(random(100) >= prly){
+    rV ++;
+  }
+  
+  if(canBeNeg && random(1) < 0.5){
+    rV *= -1;
+  }
+  return start + rV * steps;
+}
+
+
+public float nkingsRand(float max, float exponent){
+  return pow(random(1), exponent) * max;
+}
+
+
+
+public String makeString(float[] in){
+  String rV = "[";
+  for(int i = 0; i < in.length; i ++){
+    rV += in[i];
+    if(i < in.length - 1){
+      rV += ", ";
+    }
+  }
+  
+  return rV + "]";
+}
+
 
 
 
