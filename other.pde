@@ -224,5 +224,29 @@ public String makeString(float[] in){
 
 
 
+public int convertColor(float value, float[] pos, int[] cols){
+  for(int i = 0; i < pos.length; i ++){
+    if(value < pos[i]){
+      int down = cols[i - 1];
+      int up = cols[i];
+      float dif = (value - pos[i - 1]) / (pos[i] - pos[i - 1]);
+      
+      return color(
+        red(down) + dif * (red(up) - red(down)),
+        green(down) + dif * (green(up) - green(down)),
+        blue(down) + dif * (blue(up) - blue(down)));
+    }
+  }
+  return cols[cols.length - 1];
+}
+
+
+
+
+
+
+
+
+
 
 
